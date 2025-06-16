@@ -1,1 +1,1 @@
-3 page Amazon clone- cart and returns&orders are working property
+3 page Amazon clone- cart or returns & orders are working property.
