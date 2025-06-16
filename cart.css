@@ -1,0 +1,153 @@
+/* Cart Page Background and Base Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #a8b3db, #cad6e4, #f1f2f6);
+  background-size: 400% 400%;
+  animation: bgAnimation 12s ease infinite;
+  color: #232f3e;
+}
+
+/* Container for cart */
+.cart-container {
+  padding: 40px 20px;
+  animation: fadeSlide 1.5s ease;
+}
+
+/* Heading */
+.cart-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #232f3e;
+}
+
+/* Cart items layout */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Each cart card */
+.cart-card {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  align-items: center;
+  animation: zoomIn 1s ease;
+  transition: transform 0.3s;
+}
+
+.cart-card:hover {
+  transform: scale(1.02);
+}
+
+/* Product image */
+.cart-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+/* Product details */
+.cart-details h3 {
+  font-size: 20px;
+  color: #232f3e;
+}
+.cart-details p {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+/* Cart summary section */
+.cart-summary {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cart-summary h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Checkout button */
+.checkout-btn {
+  background-color: #f08804;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  transform: scale(1.05);
+  background-color: #de7600;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #444;
+  font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .cart-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-card img {
+    margin: 0 0 15px 0;
+  }
+
+  .cart-summary h2 {
+    font-size: 22px;
+  }
+
+  .checkout-btn {
+    width: 100%;
+  }
+}

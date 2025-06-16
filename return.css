@@ -1,0 +1,143 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #b5dbe5, #c1d2e8);
+  background-size: 200% 200%;
+  animation: bgAnimate 10s ease infinite;
+  color: #232f3e;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #232f3e;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.navbar .logo span {
+  color: #f08804;
+}
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+/* Orders Section */
+.orders-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+  animation: fadeIn 1.2s ease;
+}
+
+.orders-container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+/* Each Order Card */
+.order-card {
+  background: white;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  animation: slideUp 0.8s ease;
+}
+
+.order-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.order-details {
+  flex: 1;
+}
+
+.order-details h3 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+.order-actions {
+  margin-top: 15px;
+}
+.order-actions button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.track {
+  background-color: #4285f4;
+  color: white;
+}
+.return {
+  background-color: #e74c3c;
+  color: white;
+}
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bgAnimate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .order-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-card img {
+    margin-bottom: 15px;
+  }
+
+  .order-details h3 {
+    font-size: 18px;
+  }
+}
